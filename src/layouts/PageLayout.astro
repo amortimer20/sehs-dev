@@ -1,0 +1,45 @@
+---
+    import "../styles/global.css";
+    
+    import Navbar from '../components/Navbar.astro'
+
+    let { 
+        title = "",
+        container = "",
+        content = {},
+        navMargin = "3"
+    } = Astro.props
+---
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/x-icon" href="/favicon.ico" />
+    <title>{content.title ? content.title : title} | SEHS.dev</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-core.min.js" integrity="sha512-9khQRAUBYEJDCDVP2yw3LRUQvjJ0Pjx0EShmaQjcHa6AXiOv6qHQu9lCAIR8O+/D8FtaCoJ2c0Tf9Xo7hYH01Q==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/plugins/autoloader/prism-autoloader.min.js" integrity="sha512-SkmBfuA2hqjzEVpmnMt/LINrjop3GKWqsuLSSB3e7iBmYK7JuWw4ldmmxwD9mdm2IRTTi0OxSAfEGvgEi0i2Kw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script>
+        import "prismjs/plugins/line-numbers/prism-line-numbers.js";
+        import "prismjs/plugins/match-braces/prism-match-braces.js";
+    </script>
+</head>
+<body class="line-numbers match-braces">
+    <Navbar margin={navMargin} />
+    <div class={content.container ? content.container : container}>
+        <slot/>
+    </div>
+
+    <footer class="py-3 mt-4 bg-dark">
+        <p class="text-center text-light">
+            <span 
+                style="display: inline-block; transform: rotate(180deg);"
+            >
+                &copy;
+            </span>
+            Copyleft 2021 Anthony Mortimer
+        </p>
+    </footer>
+</body>
+</html>
