@@ -52,7 +52,7 @@ This program is called a choose your own adventure game. It's going to be the bi
 wolfpack_ending = False
 dragon_ending = False
 gold = 0
-hohos = 0
+twinkies = 0
 
 print("Your car crashes into a tree during a thunderstorm in the woods.")
 print("As the storm intensifies, you run into a nearby cave to seek shelter.")
@@ -61,6 +61,19 @@ print("Upon entering the cave, you see two diverging paths...\n")
 # Append .lower() to any string, string variable, or function that returns a string.
 # By making the value lowercase, it ensures the if statment executes whether they type "Left" or "left".
 choice = input("Which path do you take? (left or right) -> ").lower()
+
+print("\nRight before you leave, you see a delicious, unopened Hostess Twinkie.")
+print("Do you eat the Twinkie for sustenance, or will you save it for later?")
+
+snack_choice = input("(take or eat) -> ").lower()
+
+if snack_choice == "take":
+  twinkies = twinkies + 1
+  print("You never know when a Twinkie will come in handy...\n")
+elif snack_choice == "eat":
+  print("It's going to be a long night, so you decide to eat it.\n")
+else:
+  print("You leave the twinkie alone.\n")
 
 # Left -> Wolfpack
 # Right -> Dragon
@@ -71,7 +84,10 @@ if choice == "left":
 
   choice = input("Do you pet the pack leader? (yes or no) -> ").lower()
 
-  if choice == "yes" or choice == "y":
+  if choice == "yes" and twinkies >= 1:
+    print("As you approach, the wolves smell a delicious snack cake..")
+    print("In a fit of hungry rage, they rip you to shreds!\n")
+  elif choice == "yes":
     print("The pack leader respects and accepts you.")
     print("You are given a gold satchel by the pack leader.")
     print("You also cuddle with the wolf pack until the storm subsides...\n")
@@ -84,24 +100,14 @@ if choice == "left":
 # End left path
 elif choice == "right":
   print("You decide to take the right path.")
-  print("While walking the path, you find a box of Ho Hos, a delicious treat...\n")
-  choice = input("Do you eat them or save them for later? (eat, take) -> ").lower()
+  print("\nLater down the trail, you stumble upon an overweight,")
+  print("repulsive looking talking dragon named Mort the Pudgy.")
+  print("The dragon speaks: 'Did you bring me snack cakes??'")
 
-  if choice == "eat":
-    print("It's going to be a long night, so you decide to eat them for sustenance.")
-  elif choice == "take":
-    print("You never know when you'll need some Ho Hos, so you take them with you.")
-    hohos += 1 # Shorthand to add one to a variable; Same as hohos = hohos + 1
-  else:
-    print("You decide to leave the Ho Hos alone.")
+  choice = input("Do you have a treat to give this foul creature? (yes, no) -> ")
 
-  print("\nLater down the trail, you stumble upon an overweight talking dragon named Mortimer the Pudgy.")
-  print("The dragon speaks: 'You bring me treats??'")
-  choice = input("Do you give Mortimer the pudgy your Ho Hos? (yes, no) -> ")
-
-  # Use ( ) for order of operations
-  if (choice == "yes" or choice == "y") and hohos > 0:
-    print("Me love Ho Hos!!! Here take gold!")
+  if choice == "yes" and twinkies >= 1:
+    print("Me love Twinkie!!! Here take gold!")
     print("The dragon grants you the gold he was guarding.\n")
     gold_amount = int(input("How much gold do you take? -> "))
 
@@ -116,10 +122,10 @@ elif choice == "right":
       gold = 100000
 
     dragon_ending = True
-  elif (choice == "yes" or choice == "y") and hohos == 0:
+  elif choice == "yes":
     print("'Fool!!!'")
     print("The dragon is angry that you would try to deceive him.")
-    print("He smells that you have no Ho Hos, and devours you instead...")
+    print("He smells that you have no Twinkie, and devours you instead...")
   elif choice == "no" or choice == "n":
     print("'Fool!!!'")
     print("The dragon devours you whole.")
@@ -148,7 +154,6 @@ else:
 
 if gold > 0:
   print(f"\nYou not only survived, but you found {gold} gold! Good work!")
-
 ```
 
 ### Debug
@@ -160,15 +165,15 @@ Upon entering the cave, you see to diverging paths...
 
 Which path do you take? (left or right) -> right
 You decide to take the right path.
-While walking the path, you find a box of Ho Hos, a delicious treat...
+While walking the path, you find a box of Twinkie, a delicious treat...
 
 Do you eat them or save them for later? (eat, take) -> take
-You never know when you'll need some ho hos, so you take them with you.
+You never know when you'll need some Twinkie, so you take them with you.
 
 Later down the trail, you stumble upon an overweight talking dragon named Mortimer the Pudgy.
 The dragon speaks: 'You bring me treats??'
-Do you give Mortimer the pudgy your Ho Hos? (yes, no) -> yes
-Me love Ho Hos!!! Here take gold!
+Do you give Mortimer the pudgy your Twinkie? (yes, no) -> yes
+Me love Twinkie!!! Here take gold!
 The dragon grants you the gold he was guarding.
 
 How much gold do you take? -> 100
