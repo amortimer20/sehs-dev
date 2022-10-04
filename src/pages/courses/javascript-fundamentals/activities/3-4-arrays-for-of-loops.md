@@ -67,34 +67,6 @@ The for loop operates as such:
 ```javascript
 var readline = require("readline-sync")
 
-// Sodas App Version 2 - Uses a for of loop to iterate through array
-console.log("--- Sodas App v2 ---")
-
-var sodas = []
-var addingSodas = true
-var i = 0
-
-while (addingSodas) {
-  var soda = readline.question("Add a soda to your list: ")
-  sodas[i] = soda
-  i++
-
-  var choice = readline.question("Add another soda? (yes/no) ")
-
-  if (choice == "no") {
-    addingSodas = false
-  }
-}
-
-console.log("\nHere are your sodas:")
-
-for (var soda of sodas) {
-  console.log(`- ${soda}`)
-}
-
-// End sodas app
-console.log("\n\n")
-
 // Shopping cart app
 console.log("--- Shopping Cart ---")
 
@@ -135,21 +107,6 @@ while (addingItems) {
 ### Debug
 
 ```
---- Sodas App v2 ---
-Add a soda to your list: pepsi
-Add another soda? (yes/no) yes
-Add a soda to your list: coke
-Add another soda? (yes/no) yes
-Add a soda to your list: Crangis McSodaPop
-Add another soda? (yes/no) no
-
-Here are your sodas:
-- pepsi
-- coke
-- Crangis McSodaPop
-
-
-
 --- Shopping Cart ---
 -Menu-
 1) Add item to shopping cart
