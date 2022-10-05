@@ -115,9 +115,11 @@ while (itemChoice != "exit") {
 
   if (itemChoice == "exit") {
     console.log("Goodbye...")
-  } else if (!inventory.includes(itemChoice)) {
+  }
+  else if (!inventory.includes(itemChoice)) {
     console.log("Item not found...\n")
-  } else {
+  }
+  else {
     console.log(`Using ${itemChoice}\n`)
     var itemIndex = inventory.indexOf(itemChoice)
     inventory.splice(itemIndex, 1)
