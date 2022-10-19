@@ -56,7 +56,7 @@ title: Python Fundamentals
 
 [3.3 Lists and For Loops](activities/3-3-lists-for-loops)
 
-[3.4 List Functions](activities/3-4-list-functions)
+[3.4 List Functions and Keywords](activities/3-4-list-functions)
 
 ### Part 4 - Functions
 

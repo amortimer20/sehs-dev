@@ -1,18 +1,32 @@
 ---
 container: "container"
 layout: "../../../../layouts/PageLayout.astro"
-title: Python Fundamentals 3.4 List Functions
+title: Python Fundamentals 3.4 List Functions and Keywords
 ---
 
 [← Back](/courses/python-fundamentals/)
 
-# Activity 3.4 List Functions
+# Activity 3.4 List Functions and Keywords
 
 ### Introduction
 
-Python provides a number of different useful functions for working with lists. We will learn a small subset of functions, but be sure to check out the documentation at the end of this activity for a full list of included functions.
+Python provides a number of different useful functions and keywords for working with lists. We will learn a small subset of functions, but be sure to check out the documentation at the end of this activity for a full list of included functions.
 
 ### Examples
+
+#### The `in` Keyword - Check if an element exists
+
+The `in` keyword was introduced back when we learned about the for loop. It can be used in different 
+contexts. For example, it's important to be able to check if an element exists in a list. Here's how you can use the `in` keyword to do that:
+
+```python
+stuff = ["Xbox", "Playstation", "Nintendo"]
+
+if "Atari" in stuff:
+    print("Playing the Atari")
+else:
+    print("I don't have that console :(")
+```
 
 #### `.append(new_element)`
 
@@ -46,10 +60,11 @@ print(chips.count('hawaiian bbq'))
 
 #### `.remove(element)`
 
-Attempts to remove an element matching the value of the argument. If the element is not found, a ValueError will result. _Hint_: Before attempting to remove an element, consider first checking if it exists using the _count_ function.
+Attempts to remove an element matching the value of the argument. If the element is not found, a ValueError will result. _Hint_: Before attempting to remove an element, consider first checking if it exists using the `in` keyword.
 
 ```python
 animals = ["mongoose", "camel", "wolf", "sheep"]
+# If camel was not in the list, you would get this error: ValueError: list.remove(x): x not in list
 animals.remove("camel")
 print(animals)
 ```
@@ -114,7 +129,7 @@ while shopping:
 
         choice = input("Choose item: ")
 
-        if store_items.count(choice) > 0:
+        if choice in store_items:
             print(f"Adding {choice} to cart\n")
             cart.append(choice)
         else:
@@ -129,7 +144,7 @@ while shopping:
     elif choice == "3":
         choice = input("Choose item to remove: ")
 
-        if cart.count(choice) > 0:
+        if choice in store_items:
             cart.remove(choice)
             print(f"{choice} removed\n")
         else:
