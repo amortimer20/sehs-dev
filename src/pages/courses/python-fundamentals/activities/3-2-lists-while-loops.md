@@ -60,12 +60,12 @@ while soda_number <= 5:
     soda_list.append(input("Add a soda to your list: "))
     soda_number += 1
 
-i = 0 # Use i to access the array indexes dynamically
+i = 0 # Use i to access the list indexes dynamically
 
 # Show sodas in a list
 print("\nHere are your sodas:")
 
-# len(soda_list) returns the number of elements in the array
+# len(soda_list) returns the number of elements in the list
 while i < len(soda_list):
     print(f"- {soda_list[i]}")
     i += 1
