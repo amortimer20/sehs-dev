@@ -1,0 +1,156 @@
+---
+import PageLayout from '../../layouts/PageLayout.astro';
+import {Content as PHtml} from '../../content/html-snippets/p.md';
+import {Content as H1Html} from '../../content/html-snippets/h1.md';
+import {Content as UlHtml} from '../../content/html-snippets/ul.md';
+import {Content as OlHtml} from '../../content/html-snippets/ol.md';
+import {Content as AHtml} from '../../content/html-snippets/a.md';
+import {Content as ImgHtml} from '../../content/html-snippets/img.md';
+import {Content as VideoHtml} from '../../content/html-snippets/video.md';
+import {Content as AudioHtml} from '../../content/html-snippets/audio.md';
+---
+
+<PageLayout title="HTML Cheatsheet" navMargin="0">
+    <div class="p-5 mb-3 bg-orange">
+        <div class="container justify-content-center">
+            <div class="text-center">
+                <h1 class="display-3">HTML Cheatsheet</h1>
+                <img src="/assets/img/html-badge.png" alt="HTML Logo">
+            </div>
+        </div>
+    </div>
+
+    <h2 class="text-center">Categories</h2>
+
+    <div class="container">
+        <div class="accordion">
+            <!-- Text -->
+            <div class="accordion-item">
+                <h2 class="accordion-header">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseText">
+                        Text
+                    </button>
+                </h2>
+                <div id="collapseText" class="accordion-collapse collapse">
+                    <div class="accordion-body">
+                        <h3>Paragraph <code>&lt;p&gt;&lt;/p&gt;</code></h3>
+                        <PHtml />
+                        
+                        <h3>Headings (h1..h6) <code>&lt;h1&gt;&lt;/h1&gt;</code></h3>
+                        <H1Html />
+                    </div>
+                </div>
+            </div>
+            <!-- Lists -->
+            <div class="accordion-item">
+                <h2 class="accordion-header">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseLists">
+                        Lists
+                    </button>
+                </h2>
+                <div id="collapseLists" class="accordion-collapse collapse">
+                    <div class="accordion-body">
+                        <h3>Unordered List <code>&lt;li&gt;&lt;/li&gt;</code></h3>
+                        <p>Individual list item. Use with unordered and ordered lists</p>
+                        <h3>Unordered List <code>&lt;ul&gt;&lt;/ul&gt;</code></h3>
+                        <UlHtml />
+                        <h3>Ordered List <code>&lt;ol&gt;&lt;/ol&gt;</code></h3>
+                        <OlHtml />
+                    </div>
+                </div>
+            </div>
+            <!-- Hyperlinks -->
+            <div class="accordion-item">
+                <h2 class="accordion-header">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseHyperlinks">
+                        Hyperlinks
+                    </button>
+                </h2>
+                <div id="collapseHyperlinks" class="accordion-collapse collapse">
+                    <div class="accordion-body">
+                        <h3>Anchor - Create Hyperlinks <code>&lt;a&gt;&lt;/a&gt;</code></h3>
+                        <h4><code>href</code> - specify hyperlink path</h4>
+                        <AHtml />
+                    </div>
+                </div>
+            </div>
+            <!-- Media -->
+            <div class="accordion-item">
+                <h2 class="accordion-header">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseMedia">
+                        Media
+                    </button>
+                </h2>
+                <div id="collapseMedia" class="accordion-collapse collapse">
+                    <div class="accordion-body">
+                        <h3>Image <code>&lt;img src="" /&gt;</code></h3>
+                        <h4><code>src</code> - specify source path</h4>
+                        <h4><code>alt</code> - <i>optional</i> - Alternative text if resource fails to load</h4>
+                        <h4><code>title</code> - <i>optional</i> - Hover text</h4>
+                        <h4><code>width</code> - <i>optional</i> - Override default width</h4>
+                        <h4><code>height</code> - <i>optional</i> - Override default height</h4>
+                        <ImgHtml />
+                        <img src="/assets/img/pikachu.png" alt="Pixel Pikachu" title="Pixel Pikachu" width="128"/>
+                        
+                        <hr />
+
+                        <h3>Video <code>&lt;video src="" &gt;&lt;/video&gt;</code></h3>
+                        <h4><code>src</code> - specify source path</h4>
+                        <h4><code>controls</code> - <i>optional</i> - Display playback controls</h4>
+                        <h4><code>width</code> - <i>optional</i> - Override default width</h4>
+                        <h4><code>height</code> - <i>optional</i> - Override default height</h4>
+                        <VideoHtml />
+                        <video src="/assets/video/buck-bunny.mp4" width="256" poster="/assets/img/buck-bunny-poster.png" controls></video>
+
+                        <hr />
+
+                        <h3>Audio <code>&lt;audio src="" &gt;&lt;/video&gt;</code></h3>
+                        <h4><code>src</code> - specify source path</h4>
+                        <h4><code>controls</code> - <i>optional</i> - Display playback controls</h4>
+                        <AudioHtml />
+                        <audio src="/assets/audio/horror-trailer-long-sweep.wav" controls></audio>
+                    </div>
+                </div>
+            </div>
+            <!-- Tables -->
+            <div class="accordion-item">
+                <h2 class="accordion-header">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTables">
+                        Tables
+                    </button>
+                </h2>
+                <div id="collapseTables" class="accordion-collapse collapse">
+                    <div class="accordion-body">
+    
+                    </div>
+                </div>
+            </div>
+            <!-- Forms -->
+            <div class="accordion-item">
+                <h2 class="accordion-header">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseForms">
+                        Forms
+                    </button>
+                </h2>
+                <div id="collapseForms" class="accordion-collapse collapse">
+                    <div class="accordion-body">
+    
+                    </div>
+                </div>
+            </div>
+            <!-- Misc. -->
+            <div class="accordion-item">
+                <h2 class="accordion-header">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseMisc">
+                        Misc. Markup
+                    </button>
+                </h2>
+                <div id="collapseMisc" class="accordion-collapse collapse">
+                    <div class="accordion-body">
+    
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</PageLayout>
