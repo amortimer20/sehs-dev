@@ -8,6 +8,7 @@ import {Content as AHtml} from '../../content/html-snippets/a.md';
 import {Content as ImgHtml} from '../../content/html-snippets/img.md';
 import {Content as VideoHtml} from '../../content/html-snippets/video.md';
 import {Content as AudioHtml} from '../../content/html-snippets/audio.md';
+import {Content as TableHtml} from '../../content/html-snippets/table.md';
 ---
 
 <PageLayout title="HTML Cheatsheet" navMargin="0">
@@ -121,7 +122,42 @@ import {Content as AudioHtml} from '../../content/html-snippets/audio.md';
                 </h2>
                 <div id="collapseTables" class="accordion-collapse collapse">
                     <div class="accordion-body">
-    
+                        <h4>Table <code>&lt;table&gt;&lt;/table&gt;</code></h4>
+                        <h4>Table Row <code>&lt;tr&gt;&lt;/tr&gt;</code></h4>
+                        <p>Defines a single table row</p>
+                        <h4>Table Heading <code>&lt;th&gt;&lt;/th&gt;</code></h4>
+                        <p>Heading cell; Bold text</p>
+                        <h4>Table Data <code>&lt;td&gt;&lt;/td&gt;</code></h4>
+                        <p> Data cell; Plain text</p>
+
+                        <TableHtml />
+
+                        <table>
+                            <tr>
+                                <th>Day</th>
+                                <th>Period 1</th>
+                                <th>Period 2</th>
+                                <th>Period 3</th>
+                            </tr>
+                            <tr>
+                                <th>Monday</th>
+                                <td>Theology</td>
+                                <td>Algebra</td>
+                                <td>Chemistry</td>
+                            </tr>
+                            <tr>
+                                <th>Tuesday</th>
+                                <td>Programming</td>
+                                <td>Engineering</td>
+                                <td>Art</td>
+                            </tr>
+                            <tr>
+                                <th>Wednesday</th>
+                                <td>Business</td>
+                                <td>Government</td>
+                                <td>Physics</td>
+                            </tr>
+                        </table>
                     </div>
                 </div>
             </div>
