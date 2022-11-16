@@ -36,9 +36,19 @@ import {Content as TableHtml} from '../../content/html-snippets/table.md';
                     <div class="accordion-body">
                         <h3>Paragraph <code>&lt;p&gt;&lt;/p&gt;</code></h3>
                         <PHtml />
+                        <p>
+                            Lorem, ipsum dolor sit amet consectetur adipisicing elit. 
+                            Tenetur veniam delectus aspernatur eligendi sequi error, 
+                            saepe quod aliquid aliquam, voluptatum dignissimos.
+                        </p>
+
+                        <hr />
                         
                         <h3>Headings (h1..h6) <code>&lt;h1&gt;&lt;/h1&gt;</code></h3>
                         <H1Html />
+                        <h1>Section Numero Uno</h1>
+                        <h2>Section Numero Dos</h2>
+                        <h3>Section Numero Tres</h3>
                     </div>
                 </div>
             </div>
@@ -55,8 +65,23 @@ import {Content as TableHtml} from '../../content/html-snippets/table.md';
                         <p>Individual list item. Use with unordered and ordered lists</p>
                         <h3>Unordered List <code>&lt;ul&gt;&lt;/ul&gt;</code></h3>
                         <UlHtml />
+                        <p><b>Lebanese Dishes</b></p>
+                        <ul>
+                            <li>Hummus</li>
+                            <li>Tabbouli</li>
+                            <li>Spinach Pie</li>
+                        </ul>
+
+                        <hr />
+
                         <h3>Ordered List <code>&lt;ol&gt;&lt;/ol&gt;</code></h3>
                         <OlHtml />
+                        <p><b>Favorite Bond Movies</b></p>
+                        <ol>
+                            <li>Goldeneye</li>
+                            <li>Casino Royale</li>
+                            <li>License to Kill</li>
+                        </ol>
                     </div>
                 </div>
             </div>
@@ -72,6 +97,9 @@ import {Content as TableHtml} from '../../content/html-snippets/table.md';
                         <h3>Anchor - Create Hyperlinks <code>&lt;a&gt;&lt;/a&gt;</code></h3>
                         <h4><code>href</code> - specify hyperlink path</h4>
                         <AHtml />
+                        <a href="#">Dummy Link</a>
+                        <br />
+                        <a href="https://google.com">Absolute Path - External Site</a>
                     </div>
                 </div>
             </div>
