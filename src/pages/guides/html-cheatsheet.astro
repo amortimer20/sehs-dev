@@ -9,6 +9,11 @@ import {Content as ImgHtml} from '../../content/html-snippets/img.md';
 import {Content as VideoHtml} from '../../content/html-snippets/video.md';
 import {Content as AudioHtml} from '../../content/html-snippets/audio.md';
 import {Content as TableHtml} from '../../content/html-snippets/table.md';
+import {Content as StructuralHtml} from '../../content/html-snippets/structural.md';
+import {Content as CommentHtml} from '../../content/html-snippets/comment.md';
+import {Content as DivHtml} from '../../content/html-snippets/div.md';
+import {Content as SpanHtml} from '../../content/html-snippets/span.md';
+import {Content as MetaHtml} from '../../content/html-snippets/meta.md';
 ---
 
 <PageLayout title="HTML Cheatsheet" navMargin="0">
@@ -25,6 +30,29 @@ import {Content as TableHtml} from '../../content/html-snippets/table.md';
 
     <div class="container">
         <div class="accordion">
+            <!-- Structural -->
+            <div class="accordion-item">
+                <h2 class="accordion-header">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseStructural">
+                        Structural Markup
+                    </button>
+                </h2>
+                <div id="collapseStructural" class="accordion-collapse collapse">
+                    <div class="accordion-body">
+                        <h3>Doctype Declaration <code>&lt;!DOCTYPE html&gt;</code></h3>
+                        <p>Used to set HTML version. Always goes on first line.</p>
+                        <h3>HTML Element <code>&lt;html&gt;&lt;/html&gt;</code></h3>
+                        <p>Root/main element. All other elements (except doctype) should be nested inside this element.</p>
+                        <h3>Head <code>&lt;html&gt;&lt;/html&gt;</code></h3>
+                        <p>Configuration content, such as metadata, file links, browser tab text, etc.</p>
+                        <h3>Body <code>&lt;html&gt;&lt;/html&gt;</code></h3>
+                        <p>Visible page content. i.e. browser window</p>
+                        <h3>Title <code>&lt;title&gt;&lt;/title&gt;</code></h3>
+                        <p>Browser Tab Text</p>
+                        <StructuralHtml />
+                    </div>
+                </div>
+            </div>
             <!-- Text -->
             <div class="accordion-item">
                 <h2 class="accordion-header">
@@ -211,7 +239,25 @@ import {Content as TableHtml} from '../../content/html-snippets/table.md';
                 </h2>
                 <div id="collapseMisc" class="accordion-collapse collapse">
                     <div class="accordion-body">
-    
+                        <h3>Comments <code>&lt;!-- Comment --&gt;</code></h3>
+                        <p>Comments for developers. Does not render any content.</p>
+                        <CommentHtml />
+                        <hr />
+
+                        <h3>Div <code>&lt;div&gt;&lt;/div&gt;</code></h3>
+                        <p>Generic element for grouping content in a <b>block-level</b> element.</p>
+                        <DivHtml />
+                        <hr />
+
+                        <h3>Span <code>&lt;span&gt;&lt;/span&gt;</code></h3>
+                        <p>Generic element for grouping content in an <b>inline</b> element.</p>
+                        <SpanHtml />
+                        <hr />
+
+                        <h3>Meta <code>&lt;meta /&gt;</code></h3>
+                        <p>Defines metadata for a web page. Can be used for configuration and search engine optimization.</p>
+                        <MetaHtml />
+                        <hr />
                     </div>
                 </div>
             </div>
