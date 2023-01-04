@@ -17,6 +17,3 @@ a:not(.underline) {
   text-decoration: none;
 }
 
-.bg-orange {
-  background-color: rgb(240, 101, 42);
-}
