@@ -6,7 +6,7 @@ title: "JavaScript Fundamentals Introduction - What is JavaScript?"
 
 [← Back](/courses/javascript-fundamentals/)
 
-# What are JavaScript?
+# What is JavaScript?
 
 ## Introduction
 
