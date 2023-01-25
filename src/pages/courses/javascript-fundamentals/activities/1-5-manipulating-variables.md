@@ -35,7 +35,7 @@ This activity will take you a little bit deeper into how variables can be used. 
 console.log("--- Battle Simulator ---")
 var playerHealth = 100
 var enemyHealth = 100
-var enemyAttackDamage = 20
+var enemyAttack = 20
 var potions = 3
 
 console.log(`Health: ${playerHealth}`)
@@ -47,9 +47,9 @@ console.log("Player attacks.")
 // Subtract 15 from enemyHealth. Save new enemyHealth value.
 enemyHealth = enemyHealth - 15
 console.log(`You did 15 damage! Enemy health: ${enemyHealth}`)
-// Subtract enemyAttackDamage from player health. Save new playerHealth value.
-playerHealth = playerHealth - enemyAttackDamage
-console.log(`Enemy did ${enemyAttackDamage} damage! Player health: ${playerHealth}`)
+// Subtract enemyAttack from player health. Save new playerHealth value.
+playerHealth = playerHealth - enemyAttack
+console.log(`Enemy did ${enemyAttack} damage! Player health: ${playerHealth}`)
 console.log()
 
 console.log("Using potion...")
@@ -68,12 +68,12 @@ console.log("\n\n") // What does this do??? Google search "\n javascript"
 // Bank account demo
 console.log("--- Banking Simulator ---")
 var accountName = "Checking Account"
-var accountBalance = 100.5
+var balance = 100.5
 
-console.log(`${accountName} balance: $${accountBalance}`)
+console.log(`${accountName} balance: $${balance}`)
 console.log(`Depositing $99.01 to ${accountName}`)
-accountBalance = accountBalance + 99.01
-console.log(`${accountName} balance: $${accountBalance}`)
+balance = balance + 99.01
+console.log(`${accountName} balance: $${balance}`)
 ```
 
 ### Debug

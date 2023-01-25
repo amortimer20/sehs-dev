@@ -50,12 +50,12 @@ console.log(`You will reach age 100 in ${100 - age} years!`)
 console.log()
 
 var balance = 35.25
-var withdrawAmount = 0 // Enter a number
-var newBalance = balance - withdrawAmount
+var amount = 0 // Enter a number
+var newBalance = balance - amount
 
 console.log(`You have a balance of ${balance} in your bank account.`)
-// Literal dollar sign in front of template expression
-console.log(`If you withdraw $${withdrawAmount}, you will have $${newBalance}.`)
+// There's a literal dollar sign in front ${amount}, that's not a typo.
+console.log(`If you withdraw $${amount}, you will have $${newBalance}.`)
 console.log()
 
 var health = 100
